@@ -1,0 +1,402 @@
+/******************************************
+/* SETUP
+/*******************************************/
+
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+.clear {
+	clear: both;
+}
+.alignright {
+	float: right;
+	padding: 0 0 10px 10px; /* note the padding around a right floated image */
+}
+.alignleft {
+	float: left;
+	padding: 0 10px 10px 0; /* note the padding around a left floated image */
+}
+/* Contain floats */
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.group {
+  *zoom: 1;
+}
+.block{
+  display: block;
+}
+.floatleft{
+  float: left;
+}
+.floatright{
+  float: right;
+}
+.bold{
+  font-weight: bold;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+     color: #000;
+     font-size: 12px;
+     line-height: 1.4;
+     font-family: Helvetica, Arial, sans-serif;
+}
+.yellow{
+  color: yellow;
+}
+.underline{
+  text-decoration: underline;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+.center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.italic{
+  font-style: italic;
+  font-size: 16px;
+}
+/******************************************
+/* LAYOUT
+/*******************************************/
+.notaside{
+  width: 75%;
+  float: left;
+}
+.mainarticle{
+  height: 400px;
+  background-image: url(https://i.imgur.com/QvFvq5U.png);
+  background-size:cover;
+}
+.trump1{
+  width: 33%;
+  height: 100%;
+  color: white;
+  padding: 12px;
+  min-width: 300px;
+  float: left;
+}
+.trump1 h2{
+  font-size: 32px;
+  margin-top: 75px;
+}
+.trump1 p{
+  font-size: 20px;
+}
+.trump2{
+  width: 33%;
+  height: 100%;
+  color: white;
+  float: right;
+}
+.trump2 ul li{
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+.trump2 span{
+  margin: 20px;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white
+}
+.twentyfivep{
+  width: 25%;
+  height: 412px; /* FIXME:  */
+  float:left;
+}
+.twentyfivep img{
+  width: 100%;
+}
+.fiftyp{
+  width: 50%;
+  float:left;
+}
+.fiftyhalf{
+  height: 200px;
+  padding: 24px;
+}
+.notpurp{
+  border: 1px solid lightgrey;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+.twentyfivep h2,
+.fiftyhalf h2{
+  font-size: 28px;
+  font-weight: bold;
+}
+.purp{
+  background-color: rgba(102,0,51,1.0);
+  color: white;
+  margin-top: 6px;
+  margin-bottom: 24px;
+}
+.slateplus{
+  height: 75px;
+  width: 100%;
+  float: left;
+  border: 1px solid lightgrey;
+}
+.eightyp{
+  width: 80%;
+  height: 75px;
+  float: left;
+  color: rgba(50,10,63,1.0);
+  font-size: 25px;
+  background-image: linear-gradient(135deg, #ffffff 37.50%, #e6e6e6 37.50%, #e6e6e6 50%, #ffffff 50%, #ffffff 87.50%, #e6e6e6 87.50%, #e6e6e6 100%);
+  background-size: 5.66px 5.66px;
+}
+.eightyp img{
+  padding: 20px;
+  float: left;
+}
+.eightyp span{
+  float: left;
+  width: 80%;
+  font-weight: bold;
+}
+.twentyp{
+  width: 20%;
+  height: 75px;
+  float: left;
+  background-color: rgba(50,10,63,1.0);
+  color: white;
+}
+.join1{
+  font-size: 24px;
+}
+.join2{
+  font-size: 14px;
+}
+.eh span{
+  margin-top: 4px;
+}
+aside{
+  width: 24%;
+  float: left;
+  margin-left: 1%;
+  border-left: 1px solid lightgrey;
+}
+#noth1,
+.bottomheader,
+.articles li{
+  padding: 12px;
+}
+#h1{
+  padding: 0px;
+}
+h1{
+  font-size: 56px;
+  font-weight: bold;
+  padding-left: 12px;
+}
+.fa-chevron-right{
+  color: yellow;
+}
+.fa-user,
+.fa-search,
+.fa-bars{
+  color: white;
+  padding: 8px;
+  padding-top: 16px;
+}
+.articles{
+  background-image: linear-gradient(135deg, #ffffff 37.50%, #e6e6e6 37.50%, #e6e6e6 50%, #ffffff 50%, #ffffff 87.50%, #e6e6e6 87.50%, #e6e6e6 100%);
+  background-size: 5.66px 5.66px;
+}
+.articles li{
+  border-bottom: 1px solid lightgrey;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+.articles span{
+  font-size: 14px;
+  color: grey;
+}
+.articles h3{
+  font-size: 16px;
+  font-weight: bold;
+}
+header {
+}
+.topheader{
+  height: 75px;
+  background-color: rgba(102,0,51,1.0);
+  color: white;
+}
+.bottomheader{
+  height: 50px;
+  background-color: rgba(40,27,33,1.0);
+}
+.halfnhalf{
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+.bottomheader a{
+  color: white;
+}
+.notempty{
+  border: 1px solid lightgrey;
+  margin-top: 12px;
+}
+.notempty h2{
+  padding: 12px;
+  font-size: 24px;
+}
+footer {
+  background-color: rgba(37,37,37,1.0);
+  color: white;
+  position: fixed;
+  bottom: 0;
+  height: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.top2{
+  display: none;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+@media  only screen and (max-width: 829px){
+  .twentyfivep.empty{
+    display: none;
+  }
+  .twentyfivep.notempty img{
+    display: none;
+  }
+  .twentyfivep.notempty{
+    width: 100%;
+    height: 200px;
+    padding: 24px;
+    border-bottom: 1px solid lightgrey;
+  }
+  .trump2{
+    display: none;
+  }
+  .altarticles{
+  }
+  .fiftyp{
+    width: 100%;
+  }
+  .user,
+  .search{
+    display: none;
+  }
+  aside,
+  .notaside{
+    width: 100%;
+    margin-left: 0%;
+  }
+  .notempty h2 {
+    font-size: 28px;
+  }
+  .top1{
+    display: none;
+  }
+  .top2{
+    display: block;
+  }
+  .notempty{
+    margin: 0px;
+  }
+  .notpurp{
+    margin: 0px;
+  }
+  .purp{
+    margin: 0px;
+  }
+}
+@media (min-width: 830px) and (max-width: 1171px){
+  .twentyfivep.empty{
+    display: none;
+  }
+  .twentyfivep.notempty img{
+    display: none;
+  }
+  .twentyfivep.notempty{
+    width: 100%;
+    height: 200px;
+    padding: 24px;
+    border-bottom: 1px solid lightgrey;
+  }
+  .trump2{
+    display: none;
+  }
+  .altarticles{
+    height: 800px;
+  }
+  .fiftyp{
+    width: 100%;
+  }
+  .user,
+  .search{
+    display: none;
+  }
+  .candy{
+    font-size: 20px;
+  }
+  .notempty h2 {
+    font-size: 28px;
+  }
+  .notempty{
+    margin: 0px;
+  }
+  .notpurp{
+    margin: 0px;
+  }
+  .purp{
+    margin: 0px;
+  }
+}
+@media (min-width: 1172px) and (max-width: 1280px){
+  .twentyfivep.empty{
+    display: none;
+  }
+  .twentyfivep.notempty{
+    width: 50%;
+  }
+  .twentyfivep.notempty img{
+    height: 50%;
+  }
+  .trump2{
+    display: none;
+  }
+}
+@media (min-width: 1600px){
+  .bod{
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
