@@ -1,5 +1,5 @@
 # Slate Website
-Write a short sentence or two about this project and what it does. Be sure to include a link and a screenshot (we're front end devs so we can actually see our work!).
+Recreating the Slate Website and making it responsive
 
 **Link to project:** https://slate-website-jm.netlify.app/
 
