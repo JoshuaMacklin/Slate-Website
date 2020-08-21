@@ -1,9 +1,9 @@
 # Slate Website
 Recreating the Slate Website and making it responsive
 
-**Link to project:** https://slate-website-jm.netlify.app/
-
 ![alt tag](https://i.imgur.com/jAKVyBl.png)
+
+**Link to project:** https://slate-website-jm.netlify.app/
 
 ## How It's Made:
 
